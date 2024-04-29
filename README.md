@@ -9,10 +9,10 @@
 <p align="justify">He creado una serie de scripts para los controles del juego, pero el principal es el script "Controlador"</p>
 <h3 align="justify">Control de Personaje</h3>
 <p align="justify">El juego presenta un controlador de personaje completo y pulido que permite al jugador mover al monje por el entorno del cementerio con fluidez y precisión. Se han implementado sistemas de movimiento, salto, carrera y ataques estilo ninja.</p>
-<ul>
-  <li><strong>Movimiento Fluido:</strong> El jugador puede controlar el movimiento del monje con su teclado, permitiendo desplazamientos suaves en todas las direcciones.</li>
-  <li><strong>Saltos y Carreras:</strong> El monje puede realizar saltos y carreras, agregando profundidad al movimiento y permitiendo al jugador superar obstáculos y explorar el entorno de manera dinámica.</li>
-  <li><strong>Ataques Estilo Ninja:</strong> Se ha integrado un sistema de ataques estilo ninja que permite al jugador realizar patadas y otros movimientos ofensivos, brindando una experiencia de combate satisfactoria y fluida.</li>
+<ul align="justify">
+  <li align="justify"><strong>Movimiento Fluido:</strong> El jugador puede controlar el movimiento del monje con su teclado, permitiendo desplazamientos suaves en todas las direcciones.</li>
+  <li align="justify"><strong>Saltos y Carreras:</strong> El monje puede realizar saltos y carreras, agregando profundidad al movimiento y permitiendo al jugador superar obstáculos y explorar el entorno de manera dinámica.</li>
+  <li align="justify"><strong>Ataques Estilo Ninja:</strong> Se ha integrado un sistema de ataques estilo ninja que permite al jugador realizar patadas y otros movimientos ofensivos, brindando una experiencia de combate satisfactoria y fluida.</li>
 </ul>
 
 ```sh
@@ -43,7 +43,7 @@ https://github.com/valen28030/3D_Game/assets/167770750/50a995f8-6914-4870-adfc-d
 <h3 align="justify">Cámara en Tercera Persona</h3>
 <p align="justify">La cámara sigue al personaje en tercera persona, proporcionando una visión clara del entorno del juego mientras el jugador explora el cementerio y enfrenta al demonio. </p>
 <ul>
-  <li><strong>Seguimiento Suave:</strong> La cámara sigue al monje con movimientos suaves y naturales, asegurando que el jugador siempre tenga una vista clara de su entorno sin interrupciones bruscas.</li>
+  <li align="justify"><strong>Seguimiento Suave:</strong> La cámara sigue al monje con movimientos suaves y naturales, asegurando que el jugador siempre tenga una vista clara de su entorno sin interrupciones bruscas.</li>
 </ul>
 
 ```sh
@@ -71,8 +71,8 @@ public void SeguirPersonaje()
 <h3 align="justify">Sistema de Combate</h3>
 <p align="justify">El monje tiene la capacidad de derrotar al demonio mediante patadas estilo ninja. Se ha implementado un sistema de combate que permite al jugador realizar ataques y defenderse del enemigo.</p>
 <ul>
-  <li><strong>Ataques y Defensas:</strong> Se ha implementado un sistema de combate que permite al jugador realizar una variedad de ataques, como patadas y golpes, así como defenderse de los ataques del enemigo.</li>
-  <li><strong>Interacciones Fluidas:</strong> Los ataques del jugador y del enemigo están sincronizados de manera fluida, lo que garantiza una experiencia de combate dinámica y satisfactoria.</li>
+  <li align="justify"><strong>Ataques y Defensas:</strong> Se ha implementado un sistema de combate que permite al jugador realizar una variedad de ataques, como patadas y golpes, así como defenderse de los ataques del enemigo.</li>
+  <li align="justify"><strong>Interacciones Fluidas:</strong> Los ataques del jugador y del enemigo están sincronizados de manera fluida, lo que garantiza una experiencia de combate dinámica y satisfactoria.</li>
   
 ```sh
 // Función para realizar ataques del personaje
@@ -86,7 +86,7 @@ public void RealizarAtaque()
     }
 }
 ```
-<li><strong>Disparo Laser:</strong> Cada cierto tiempo un Laser atacara al jugador que sin capacidad de poder esquivarlo le restara 5 puntos.</li>
+<li align="justify"><strong>Disparo Laser:</strong> Cada cierto tiempo un Laser atacara al jugador que sin capacidad de poder esquivarlo le restara 5 puntos.</li>
 
 ```sh
 public void FireLaser()
@@ -107,8 +107,8 @@ public void FireLaser()
 <h3 align="justify">Inteligencia Artificial del Enemigo</h3>
 <p align="justify">El demonio sigue una lógica concreta y puede detectar al jugador de alguna manera. Utiliza esta lógica para perseguir al monje y atacarlo, creando un desafío emocionante para el jugador.</p>
 <ul>
-  <li><strong>Persecución y Ataque:</strong> El demonio utiliza una lógica de persecución para rastrear al monje y atacarlo cuando está cerca, creando una sensación de tensión y desafío para el jugador.</li>
-  <li><strong>Comportamiento Reactivo:</strong> El enemigo responde de manera dinámica a las acciones del jugador, lo que garantiza que cada encuentro sea único y desafiante.</li>
+  <li align="justify"><strong>Persecución y Ataque:</strong> El demonio utiliza una lógica de persecución para rastrear al monje y atacarlo cuando está cerca, creando una sensación de tensión y desafío para el jugador.</li>
+  <li align="justify"><strong>Comportamiento Reactivo:</strong> El enemigo responde de manera dinámica a las acciones del jugador, lo que garantiza que cada encuentro sea único y desafiante.</li>
 </ul>
 
 ```sh
