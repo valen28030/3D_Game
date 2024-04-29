@@ -35,6 +35,8 @@ public void Movimiento()
 }
 ```
 
+
+
 &nbsp;
 
 
@@ -59,6 +61,8 @@ public void SeguirPersonaje()
 
 <h3 align="justify">Escenario y Estética</h3>
 <p align="justify">El cementerio está diseñado con una estética coherente y espeluznante, utilizando assets 3D descargados de Internet. Se han asignado materiales e iluminación para darle un aspecto pulido y razonable, creando una atmósfera inmersiva y siniestra.</p>
+
+
 
 &nbsp;
 
@@ -91,6 +95,8 @@ public void FireLaser()
 }
 ```
 </ul>
+
+![Captura de pantalla 2024-04-29 120140](https://github.com/valen28030/3D_Game/assets/167770750/3c814456-3b74-4590-a87e-88eff39b181c)
 
 &nbsp;
 
