@@ -96,7 +96,7 @@ public void FireLaser()
 ```
 </ul>
 
-![Captura de pantalla 2024-04-29 120140](https://github.com/valen28030/3D_Game/assets/167770750/3c814456-3b74-4590-a87e-88eff39b181c)
+<img src="https://github.com/valen28030/3D_Game/assets/167770750/3c814456-3b74-4590-a87e-88eff39b181c" width="300"><ul>
 
 &nbsp;
 
