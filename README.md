@@ -35,7 +35,7 @@ public void Movimiento()
 }
 ```
 
-![MOVE-_online-video-cutter com_-_1_ (1) (1) (1)](https://github.com/valen28030/3D_Game/assets/167770750/3c1e7391-d689-4f85-9823-a5f7e43d347e)
+https://github.com/valen28030/3D_Game/assets/167770750/50a995f8-6914-4870-adfc-d9fe8736e1a1
 
 &nbsp;
 
@@ -187,6 +187,9 @@ public void Destruir() {
     SceneManager.LoadScene(0);
 }
 ```
+
+![muerte-_online-video-cutter com_](https://github.com/valen28030/3D_Game/assets/167770750/fcf7c136-f6f1-4cf0-8375-2ac976034d7a)
+
 &nbsp;
 
 
