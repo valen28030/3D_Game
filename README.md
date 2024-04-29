@@ -6,7 +6,7 @@
 &nbsp;
 
 <h2 align="justify">Desarrollo del Juego</h2>
-<p align="justify">He creado una serie de scripts para los controles del juego.</p>
+<p align="justify">He creado una serie de scripts para los controles del juego, pero el principal es el script "Controlador"</p>
 <h3 align="justify">Control de Personaje</h3>
 <p align="justify">El juego presenta un controlador de personaje completo y pulido que permite al jugador mover al monje por el entorno del cementerio con fluidez y precisión. Se han implementado sistemas de movimiento, salto, carrera y ataques estilo ninja.</p>
 <ul>
@@ -113,6 +113,137 @@ public void SeguirJugador()
 }
 ```
 
+&nbsp;
+
+
+<h3 align="justify">Gestión del Raycast</h3>
+<p align="justify">Método que gestiona el raycast para detectar colisiones y actualizar el LineRenderer del láser.</p> 
+
+```sh
+public void Raycast() 
+{
+    // Realiza un raycast desde el objetivo hacia el personaje principal
+    if (Physics.Raycast(Target.transform.position, Target.transform.position, out R, 100))
+    {
+        Target.transform.position = R.point;
+        if (R.transform.tag == "Prota")
+        {
+            Destroy(R.transform.gameObject);
+        }
+    }
+    // Actualiza el LineRenderer para visualizar el rayo láser
+    Laser.SetPosition(0, Target.transform.position);
+    Laser.SetPosition(1, Monje.transform.position);
+}
+```
+
+&nbsp;
+
+
+<h3 align="justify">Script AgenteController</h3>
+<p align="justify">El script AgenteController controla el comportamiento del enemigo y su interacción con el personaje principal. Aquí está una parte relevante de este script:</p> 
+
+```sh
+// Configuración del destino del enemigo (demonio) para seguir al personaje principal
+void Update()
+{
+    Demonio.SetDestination(Monje.transform.position + new Vector3(-2,2,0));
+}
+
+// Detecta colisiones con el personaje principal y resta vida
+public void OnCollisionEnter(Collision collision)
+{
+    Laser.RestarScore();
+}
+```
+
+&nbsp;
+
+
+<h3 align="justify">Script Muerte</h3>
+<p align="justify">El script Muerte maneja las colisiones entre el personaje principal y el enemigo, así como la destrucción del enemigo cuando el personaje principal muere. Aquí está una parte relevante de este script:</p> 
+
+```sh
+// Maneja las colisiones con el personaje principal y resta vida al enemigo
+private void OnTriggerEnter(Collider other)
+{
+    if (other.tag == "Prota") {
+        Controlador.RestarEnemy();
+    }
+}
+
+// Destruye al enemigo (demonio) y reinicia la escena
+public void Destruir() {
+    Destroy(Demon);
+    SceneManager.LoadScene(0);
+}
+```
+&nbsp;
+
+
+<h3 align="justify">Script Vida</h3>
+<p align="justify">El script Vida gestiona las interacciones relacionadas con la vida del personaje principal. Aquí está una descripción de su funcionalidad:</p> 
+
+```sh
+// Maneja las colisiones con objetos etiquetados como "Enemy" y resta vida al personaje principal
+private void OnTriggerEnter(Collider other)
+{
+    if (other.tag == "Enemy") {
+        Controlador.RestarScore();
+    }
+}
+
+// Método que reinicia la escena cuando el personaje principal muere
+public void Recargar()
+{
+    SceneManager.LoadScene(0);
+}
+
+// Método que indica al controlador que el personaje principal está en movimiento
+public void Inmove() 
+{
+    Controlador.move = false;
+}
+```
+
+&nbsp;
+
+
+<h3 align="justify">Script Musica</h3>
+<p align="justify">El script Musica se encarga de reproducir y gestionar la música de fondo del juego. Aquí está una descripción de su funcionalidad:</p> 
+
+```sh
+// Reproduce una canción específica identificada por su ID
+public void Reproducir(int id) 
+{
+    musica.clip = canciones[id];
+    cancionsonando = id;
+    musica.Play();
+}
+
+// Método que avanza automáticamente a la siguiente canción cuando una canción termina
+public void NextAutomatico()
+{
+    if (musica.clip != null)
+    {
+        if (musica.isPlaying && musica.time >= musica.clip.length - 0.1f) // 0.1f es un pequeño margen para asegurarse de que hemos llegado al final.
+        {
+            Next();
+        }
+    }
+}
+
+// Método que avanza a la siguiente canción en la lista de reproducción
+public void Next()
+{
+    cancionsonando++;
+    if (cancionsonando >= canciones.Length)
+    {
+            cancionsonando = 0;
+    }
+    Reproducir(cancionsonando);
+}
+```
 &nbsp;
 
 
